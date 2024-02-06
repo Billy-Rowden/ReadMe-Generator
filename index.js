@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require('path');
-const inquirer = require("inquirer");
+const inquirer = require("inquirer")
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
@@ -26,10 +26,10 @@ const questions = [
         message: "Please explain how your application is used:",
     },
     {
-        type: "input",
+        type: "list",
         name: "license",
         message: "Please choose a license for your application:",
-        choice: ['MIT', 'Apache 2.0', 'BSL1.0', 'GPLv3.0', 'none']
+        choices: ['MIT', 'Apache 2.0', 'BSL1.0', 'GPLv3.0', 'none']
     },
     {
         type: "input",
@@ -55,9 +55,16 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(filename, data, err =>{
+    // Make sure the output directory exists
+    const outputPath = path.resolve(__dirname, 'output');
+    if (!fs.existsSync(outputPath)) {
+        fs.mkdirSync(outputPath);
+    }
+
+    // Write the README content to the file
+    fs.writeFile(fileName, data, err =>{
         if (err) {
-            console.error(err);
+            console.error('Error writing to README.md:', err);
         }   else {
             console.log(`${fileName} created successfully.`)
         }
@@ -66,11 +73,11 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-    inquirer.createPromptModule(questions).then(answers => {
+    inquirer.prompt(questions).then(answers => {
         // Generate the readme content using generateMarkdown function
         const readmeContent = generateMarkdown(answers);
         // write this content to a new README.md file
-        writeToFile('README.md', readmeContent);
+        writeToFile("./output/README.md", readmeContent);
     });
 }
 
