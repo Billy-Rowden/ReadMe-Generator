@@ -55,11 +55,23 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(filename, data, err =>{
+        if (err) {
+            console.error(err);
+        }   else {
+            console.log(`${fileName} created successfully.`)
+        }
+    });
 }
 
 // function to initialize program
 function init() {
-
+    inquirer.createPromptModule(questions).then(answers => {
+        // Generate the readme content using generateMarkdown function
+        const readmeContent = generateMarkdown(answers);
+        // write this content to a new README.md file
+        writeToFile('README.md', readmeContent);
+    });
 }
 
 // function call to initialize program
