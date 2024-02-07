@@ -1,3 +1,11 @@
+// Create a function to return a badge for the license based on which license is chosen
+function licenseBadge(license) {
+  if (license !== "none") {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-orange.svg)`;
+  }
+  return "";
+}
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `
@@ -21,7 +29,8 @@ ${data.installation}
 ${data.usage}
 
 ## License
-${data.license}
+This Project is licensed under the ${data.license} license.
+${licenseBadge(data.license)}
 
 ## Contributions
 ${data.contributions}

@@ -13,13 +13,14 @@ This allows the user to generate a README file quickly
 - [Questions](#questions)
 
 ## Installation
-Open up the terminal, use the command line node index.js, answer a series of questions
+Open up the terminal and enter "node index.js" into the command line
 
 ## Usage
-User answers these questions for the different sections of their README
+User answers the questions that appear for the difference sections of the README to be generated
 
 ## License
-MIT
+This Project is licensed under the MIT license.
+![GitHub license](https://img.shields.io/badge/license-MIT-orange.svg)
 
 ## Contributions
 None
@@ -28,4 +29,4 @@ None
 N/A
 
 ## Questions
-If you have any questions, please contact [Billy-Rowden (url)](https://github.com/Billy-Rowden (url)) or email lookmeup@gmail.com.
+If you have any questions, please contact [Billy-Rowden](https://github.com/Billy-Rowden) or email lookmeup@gmail.com.
