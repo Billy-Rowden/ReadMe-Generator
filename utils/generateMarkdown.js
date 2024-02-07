@@ -11,6 +11,8 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
+${licenseBadge(data.license)}
+
 ## Description
 ${data.description}
 
@@ -30,7 +32,6 @@ ${data.usage}
 
 ## License
 This Project is licensed under the ${data.license} license.
-${licenseBadge(data.license)}
 
 ## Contributions
 ${data.contributions}

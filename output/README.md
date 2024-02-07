@@ -1,6 +1,8 @@
 
 # Readme Generator
 
+![GitHub license](https://img.shields.io/badge/license-MIT-orange.svg)
+
 ## Description
 This allows the user to generate a README file quickly
 
@@ -20,7 +22,6 @@ User answers the questions that appear for the difference sections of the README
 
 ## License
 This Project is licensed under the MIT license.
-![GitHub license](https://img.shields.io/badge/license-MIT-orange.svg)
 
 ## Contributions
 None
@@ -29,4 +30,4 @@ None
 N/A
 
 ## Questions
-If you have any questions, please contact [Billy-Rowden](https://github.com/Billy-Rowden) or email lookmeup@gmail.com.
+If you have any questions, please contact [Billy-Rowden](https://github.com/Billy-Rowden) or email williampsr.rowden@gmail.com.
