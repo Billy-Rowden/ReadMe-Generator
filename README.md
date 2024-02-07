@@ -22,7 +22,9 @@ Application Repository can be found at GitHub URL : https://github.com/Billy-Row
 
 An application that the user can utilise to generate a basic README file quickly by answering a couple questions in the command line of their terminal.
 
-The following gif demonstrates the functionality of the application, displaying the creation of a sample README file.
+The following video link demonstrates the functionality of the application, displaying the creation of a sample README file:
+
+https://app.screencastify.com/v3/watch/Xo8dUyDvHjbtqwg2U1oB 
 
 ## Credits
 
